@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expenses Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="tracker-container">
+    <h1 class="app-title">Expenses Tracker</h1>
+ 
+    <div class="balance-card">
+      <span class="label">Balance</span>
+      <span id="balance" class="amount">₹0.00</span>
+      <div id="status-message" class="status-message"></div>
+    </div>
+ 
+    <div class="income-expense-row">
+      <div>
+        <span class="label">Income</span>
+        <span id="money-plus" class="amount income">₹0.00</span>
+      </div>
+      <div>
+        <span class="label">Expense</span>
+        <span id="money-minus" class="amount expense">₹0.00</span>
+      </div>
+    </div>
+ 
+    <div class="history-section">
+      <h2>History</h2>
+      <ul id="list" class="history-list"></ul>
+    </div>
+ 
+    <div class="add-section">
+      <h2>Add New Transaction</h2>
+      <form id="form" autocomplete="off">
+        <div class="input-row">
+          <input type="text" id="text" placeholder="Description" required>
+          <input type="number" step="0.01" id="amount" placeholder="Amount" required>
+          <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+        <button class="btn-primary" type="submit">Add Transaction</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
